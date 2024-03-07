@@ -1,7 +1,3 @@
-/*  
-    Weights: 400, 700  
-*/
-
 /*  Primary */
 
 $BrightBlue: hsl(220, 98%, 61%);
@@ -62,6 +58,7 @@ body {
   font-size: 18px;
   background-color: $VeryLightGrayishBlue;
   @apply dark:bg-[hsl(235,21%,11%)];
+  foo: bar;
 }
 
 .App {
@@ -70,7 +67,7 @@ body {
     md:w-9/12
     md:text-[1.6rem]
     xl:w-2/3
-    2xl:w-7/12
+    2xl:w-7/12;
 }
 .mainContent {
   @apply mx-6;
@@ -102,7 +99,6 @@ label > input {
 }
 label > img {
   position: absolute;
-  
 }
 .toggle {
   position: absolute;
@@ -116,24 +112,24 @@ label > img {
 
 .iconMoon {
   transform: scale(1.5) rotate(360deg);
-  transition:  0.8s ease;
-  transition-delay: .5s;
-}
- input:checked~.iconMoon {
-  transform: scale(1.5) rotate(360deg) ;
-}
-.iconSun{
   transition: 0.8s ease;
-  transform: scale(1.5);
-  transition-delay: .5s;
+  transition-delay: 0.5s;
 }
- input:checked~.iconSun {
+input:checked ~ .iconMoon {
   transform: scale(1.5) rotate(360deg);
 }
-.iconSunHidden{
+.iconSun {
+  transition: 0.8s ease;
+  transform: scale(1.5);
+  transition-delay: 0.5s;
+}
+input:checked ~ .iconSun {
+  transform: scale(1.5) rotate(360deg);
+}
+.iconSunHidden {
   scale: 0;
 }
-.iconMoonHidden{
+.iconMoonHidden {
   scale: 0;
 }
 
@@ -148,11 +144,12 @@ label > img {
   align-items: center;
   overflow: hidden;
   border-color: $LightGrayishBlue;
-  @apply dark:border-[hsl(233,14%,35%)]
-  w-[40.45px]
+  @apply w-[40.45px]
   lg:w-[40.83px]
   h-[30px]
-  lg:h-[33px];
+  lg:h-[33px]
+  dark:border-[hsl(233,14%,35%)];
+  foo: bar;
 }
 .circle:hover {
   border-color: lightblue;
@@ -161,7 +158,6 @@ label > img {
   height: 75%;
   width: 75%;
   background-size: cover;
- 
 }
 .check {
   background: $CheckBackground;
@@ -178,13 +174,12 @@ label > img {
   background-color: $VeryLightGray;
   @apply py-4
   rounded-md
-  
-  font-bold
   flex
-  pl-2
   2xl:py-6
   2xl:mt-6
-  dark:bg-[hsl(235,24%,19%)];
+  pl-2
+  dark:bg-[hsl(235,24%,19%)]
+  font-bold;
 }
 input {
   transition: 0.3s ease;
@@ -202,20 +197,19 @@ input {
   items-center;
 }
 .input-section > .circle {
-  @apply 
-  w-[30px]
+  @apply w-[30px]
   lg:w-[35px]
   h-[30px]
   lg:h-[35px];
-  margin: 0 2% 0 2% ;
+  foo: bar;
+  margin: 0 2% 0 2%;
 }
 .info {
   transition: 0.3s ease;
   background-color: $VeryLightGray;
   @apply px-2
   dark:bg-[hsl(235,24%,19%)]
-  rounded-lg
-  ;
+  rounded-lg;
 }
 
 ul {
@@ -226,6 +220,7 @@ ul {
   background-color: $VeryLightGray;
   @apply dark:bg-[hsl(235,24%,19%)]
   dark:text-[hsl(236,33%,92%)];
+  foo: bar;
 }
 .lista {
   border-color: $VeryLightGrayishBlue;
@@ -242,20 +237,20 @@ ul {
   margin-left: 4%;
   font-size: 1rem;
   @apply max-md:w-5/6
-  w-full
   md:text-[1.2rem]
   lg:text-[1.4rem]
   2xl:text-[1.8rem]
-  ;
+  w-full;
   cursor: pointer;
 }
- .bottom, input::placeholder {
-  @apply
-  text-[1rem]
+
+.bottom,
+input::placeholder {
+  @apply text-[1rem]
   md:text-[1.2rem]
   lg:text-[1.4rem]
-  2xl:text-[1.6rem]
-  ;
+  2xl:text-[1.6rem];
+  foo: bar;
 }
 
 .bottom {
@@ -299,6 +294,7 @@ ul {
   rounded-md
   justify-evenly
   dark:bg-[hsl(235,24%,19%)];
+  foo: bar;
   color: $DarkGrayishBlueSecond;
   font-weight: 700;
 }
@@ -307,6 +303,7 @@ span:hover {
   cursor: pointer;
   color: $VeryDarkBlue;
   @apply dark:text-[hsl(236,33%,92%)];
+  foo: bar;
 }
 .selectedSection {
   color: $BrightBlue;
